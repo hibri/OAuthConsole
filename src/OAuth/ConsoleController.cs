@@ -5,11 +5,11 @@ using SevenDigital.Api.OAuthConsole.UI.Http;
 
 namespace SevenDigital.Api.OAuthConsole.UI.OAuth
 {
-	internal class HttpOAuthClient
+	internal class ConsoleController
 	{
 		private readonly IView _view;
 
-		public HttpOAuthClient(IView view)
+		public ConsoleController(IView view)
 		{
 			_view = view;
 		}
