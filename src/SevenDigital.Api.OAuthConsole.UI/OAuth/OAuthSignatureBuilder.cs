@@ -58,6 +58,7 @@ namespace SevenDigital.Api.OAuthConsole.UI.OAuth
 				}
 
 				myOAuth.includeVersion = _view.IncludeVersion;
+				string oAuthVersion = _view.IncludeVersion ? OAuthBase.OAuthVersion : null;
 
 				string signature = "";
 				if (httpMethod == "POST")
@@ -65,7 +66,7 @@ namespace SevenDigital.Api.OAuthConsole.UI.OAuth
 					Dictionary<string, string> dictionary = new HttPostVariables().Parse(_view.PostData);
 					signature = myOAuth.GenerateSignature(uri, consumerKey, consumerSecret, token, tokenSecret, httpMethod,
 					                                      timeStamp, nonce, signatureType, out normalizedUrl,
-					                                      out normalizedRequestParameters, dictionary);
+					                                      out normalizedRequestParameters, dictionary, oAuthVersion);
 				}
 				else
 				{
@@ -73,11 +74,11 @@ namespace SevenDigital.Api.OAuthConsole.UI.OAuth
 					                                      token, tokenSecret, httpMethod,
 					                                      timeStamp, nonce, signatureType,
 					                                      out normalizedUrl,
-					                                      out normalizedRequestParameters, null);
+					                                      out normalizedRequestParameters, null, oAuthVersion);
 				}
 
 				_view.RawSignature = signature;
-				_view.EncodedSignature = myOAuth.UrlEncode(signature);
+				_view.EncodedSignature = OAuthBase.UrlEncode(signature);
 
 				_view.GeneratedUrl = normalizedUrl + "?" + normalizedRequestParameters +
 				                     "&oauth_signature=" + _view.EncodedSignature;
