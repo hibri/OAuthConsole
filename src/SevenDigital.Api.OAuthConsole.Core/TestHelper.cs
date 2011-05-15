@@ -1,12 +1,13 @@
-using System;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
-using System.Linq;
 using System.Text;
-using SevenDigital.Api.OAuthConsole.UI.Extensions;
+using System.Linq;
+using SevenDigital.Api.OAuthConsole.Core.Extensions;
 
-namespace SevenDigital.Api.OAuthConsole.UI
+namespace SevenDigital.Api.OAuthConsole.Core
 {
-	internal static class TestHelper
+	public static class TestHelper
 	{
 		public static event EventHandler<EventArgs<string>> OnLogMessage;
 
@@ -23,10 +24,9 @@ namespace SevenDigital.Api.OAuthConsole.UI
 		internal static void DumpNameValueCollection(NameValueCollection pNameValue,
 		                                             string pCollectionName) {
 			var sb = new StringBuilder();
-			pNameValue.ToPairs()
-				.OrderBy(x => x.Key)
-				.ToList()
-				.ForEach(x => sb.Append("{0}={1},".FormatWith(x.Key, x.Value)));
+			Enumerable.ToList<KeyValuePair<string, string>>(pNameValue.ToPairs()
+				                                      	.OrderBy(x => x.Key))
+				.ForEach(x => sb.Append((string) "{0}={1},".FormatWith(x.Key, x.Value)));
 
 			FireLogMessage("[{1}] : {0}", sb.ToString(), pCollectionName);
 		}

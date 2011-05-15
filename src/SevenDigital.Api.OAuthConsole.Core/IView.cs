@@ -1,4 +1,4 @@
-namespace SevenDigital.Api.OAuthConsole.UI
+﻿namespace SevenDigital.Api.OAuthConsole.Core
 {
     public interface IView
     {

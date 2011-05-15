@@ -73,24 +73,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OAuth\AuthorizationHeaderBuilder.cs" />
-    <Compile Include="Http\HttPostVariables.cs" />
-    <Compile Include="Http\OAuthPostRequest.cs" />
-    <Compile Include="OAuth\HttpOAuthClient.cs" />
-    <Compile Include="OAuth\OAuthSignatureBuilder.cs" />
-    <Compile Include="IView.cs" />
-    <Compile Include="OAuth\OAuthRequestData.cs" />
-    <Compile Include="TestHelper.cs" />
-    <Compile Include="Extensions\CollectionExtensions.cs" />
-    <Compile Include="Extensions\CustomExtensions.cs" />
-    <Compile Include="EventArgs.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="OAuth\OAuthBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -152,6 +140,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SevenDigital.Api.OAuthConsole.Core\SevenDigital.Api.OAuthConsole.Core.csproj">
+      <Project>{DC1D596A-C5E4-4168-8EE1-3726E6AF7465}</Project>
+      <Name>SevenDigital.Api.OAuthConsole.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

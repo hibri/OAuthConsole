@@ -1,9 +1,9 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Linq;
 
-namespace SevenDigital.Api.OAuthConsole.UI.Extensions
+namespace SevenDigital.Api.OAuthConsole.Core.Extensions
 {
 	public static class CollectionExtensions
 	{
@@ -15,7 +15,7 @@ namespace SevenDigital.Api.OAuthConsole.UI.Extensions
 
 			return
 				collection.Cast<string>().Select(
-					key => new KeyValuePair<string, string>(key, collection[key]));
+					key => new KeyValuePair<string, string>(key, collection[(string) key]));
 		}
 	}
 }

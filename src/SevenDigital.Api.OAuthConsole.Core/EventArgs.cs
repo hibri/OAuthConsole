@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace SevenDigital.Api.OAuthConsole.UI
+namespace SevenDigital.Api.OAuthConsole.Core
 {
 	public class EventArgs<T> : EventArgs
 	{

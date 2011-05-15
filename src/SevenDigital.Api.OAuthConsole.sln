@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Api.OAuthConso
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Api.OAuthConsole.Tests", "SevenDigital.Api.OAuthConsole.Tests\SevenDigital.Api.OAuthConsole.Tests.csproj", "{45A6B9FB-8839-4DD0-A58D-CB11BB8C2493}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SevenDigital.Api.OAuthConsole.Core", "SevenDigital.Api.OAuthConsole.Core\SevenDigital.Api.OAuthConsole.Core.csproj", "{DC1D596A-C5E4-4168-8EE1-3726E6AF7465}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{45A6B9FB-8839-4DD0-A58D-CB11BB8C2493}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45A6B9FB-8839-4DD0-A58D-CB11BB8C2493}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45A6B9FB-8839-4DD0-A58D-CB11BB8C2493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1D596A-C5E4-4168-8EE1-3726E6AF7465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1D596A-C5E4-4168-8EE1-3726E6AF7465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1D596A-C5E4-4168-8EE1-3726E6AF7465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1D596A-C5E4-4168-8EE1-3726E6AF7465}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

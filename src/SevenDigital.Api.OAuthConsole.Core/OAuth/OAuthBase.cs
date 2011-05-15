@@ -1,6 +1,6 @@
-using System;
-using System.Security.Cryptography;
+﻿using System;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 
@@ -8,7 +8,7 @@ using System.Web;
  * Do not refactor this class too much.
  * Should function as a reference implementation.
  * */
-namespace SevenDigital.Api.OAuthConsole.UI.OAuth
+namespace SevenDigital.Api.OAuthConsole.Core.OAuth
 {
 	public class OAuthBase
 	{

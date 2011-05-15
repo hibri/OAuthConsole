@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SevenDigital.Api.OAuthConsole.UI.OAuth
+namespace SevenDigital.Api.OAuthConsole.Core.OAuth
 {
 	public class OAuthRequestData {
 		public OAuthRequestData(bool oAuthSignRequest, Uri fullyQualifiedUrl, string postParams, string oAuthConsumerKey, string oAuthConsumerSecret, string oAuthTokenKey, string oAuthTokenSecret, string signature, string nonce, string timeStamp) {

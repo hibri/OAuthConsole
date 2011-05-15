@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Text;
 using System.Windows.Forms;
-using SevenDigital.Api.OAuthConsole.UI.OAuth;
+using SevenDigital.Api.OAuthConsole.Core;
+using SevenDigital.Api.OAuthConsole.Core.OAuth;
 
 namespace SevenDigital.Api.OAuthConsole.UI
 {

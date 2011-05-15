@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SevenDigital.Api.OAuthConsole.UI.OAuth
+namespace SevenDigital.Api.OAuthConsole.Core.OAuth
 {
 	public class AuthorizationHeaderBuilder
 	{

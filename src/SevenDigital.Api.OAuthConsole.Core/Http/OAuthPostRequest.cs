@@ -4,10 +4,9 @@ using System.IO;
 using System.Net;
 using System.Net.Security;
 using System.Text;
-using System.Web;
-using SevenDigital.Api.OAuthConsole.UI.OAuth;
+using SevenDigital.Api.OAuthConsole.Core.OAuth;
 
-namespace SevenDigital.Api.OAuthConsole.UI.Http
+namespace SevenDigital.Api.OAuthConsole.Core.Http
 {
 	public class OAuthPostRequest
 	{
@@ -41,7 +40,7 @@ namespace SevenDigital.Api.OAuthConsole.UI.Http
 		private string GetPostResponse(OAuthRequestData oAuthRequestData, WebClient client) {
 			string response;
 			try {
-				response = client.UploadString(oAuthRequestData.FullyQualifiedUrl, oAuthRequestData.PostParams);
+				response = client.UploadString((Uri) oAuthRequestData.FullyQualifiedUrl, oAuthRequestData.PostParams);
 			} catch (WebException ex) {
 				NotifyErrorResponse(ex);
 				response = "[Failed: Please check the Console Out Tab]";

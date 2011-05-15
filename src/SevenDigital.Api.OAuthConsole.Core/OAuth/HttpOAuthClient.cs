@@ -1,11 +1,11 @@
 ﻿using System;
 using System.IO;
 using System.Net;
-using SevenDigital.Api.OAuthConsole.UI.Http;
+using SevenDigital.Api.OAuthConsole.Core.Http;
 
-namespace SevenDigital.Api.OAuthConsole.UI.OAuth
+namespace SevenDigital.Api.OAuthConsole.Core.OAuth
 {
-	internal class HttpOAuthClient
+	public class HttpOAuthClient
 	{
 		private readonly IView _view;
 
@@ -48,7 +48,7 @@ namespace SevenDigital.Api.OAuthConsole.UI.OAuth
 					string authHeader = GetAuthHeader(oAuthRequest);
 					webClient.Headers.Add(HttpRequestHeader.Authorization, authHeader);
 				}
-				string response = webClient.DownloadString(_view.GeneratedUrl);
+				string response = webClient.DownloadString((string) _view.GeneratedUrl);
 				_view.DisplayResponse(response);
 			} catch (WebException wex) {
 				DisplayError(wex);

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace SevenDigital.Api.OAuthConsole.UI.Http
+namespace SevenDigital.Api.OAuthConsole.Core.Http
 {
 	internal class HttPostVariables
 	{

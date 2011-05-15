@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace SevenDigital.Api.OAuthConsole.UI.Extensions
+namespace SevenDigital.Api.OAuthConsole.Core.Extensions
 {
 	public static class CustomExtensions
 	{

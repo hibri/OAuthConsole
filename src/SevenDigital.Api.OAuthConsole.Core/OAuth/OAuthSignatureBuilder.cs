@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Forms;
-using SevenDigital.Api.OAuthConsole.UI.Http;
+using SevenDigital.Api.OAuthConsole.Core.Http;
 
-namespace SevenDigital.Api.OAuthConsole.UI.OAuth
+namespace SevenDigital.Api.OAuthConsole.Core.OAuth
 {
-	internal class OAuthSignatureBuilder
+	public class OAuthSignatureBuilder
 	{
 		private readonly IView _view;
 
@@ -83,9 +82,8 @@ namespace SevenDigital.Api.OAuthConsole.UI.OAuth
 				_view.GeneratedUrl = normalizedUrl + "?" + normalizedRequestParameters +
 				                     "&oauth_signature=" + _view.EncodedSignature;
 			}
-			catch (Exception exception)
-			{
-				MessageBox.Show(exception.Message);
+			catch (Exception exception) {
+				throw exception;
 			}
 		}
 	}
